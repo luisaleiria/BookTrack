@@ -1,9 +1,13 @@
-import { Router } from 'express';
+import { Express, Router } from 'express';
+import { cadastrarUsuario, listarUsuarios, excluirUsuario } from '../controllers/usuario.controller';
 
-const routes = Router();
+export default (app: Express) => {
+  const router = Router();
 
-routes.get('/', (req, res) => {
-  res.send('API is working!');
-});
+  // router.post('/usuarios', cadastrarUsuario);
+  // router.get('/usuarios', listarUsuarios);
+  // router.delete('/usuarios/:id', excluirUsuario);
 
-export default routes;
+  // Registra o router com o prefixo '/api'
+  app.use('/api', router);
+};

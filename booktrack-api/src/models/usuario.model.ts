@@ -5,9 +5,9 @@ export default class UsuarioModel extends BaseModel {
     nome: string;
     email: string;
 
-    constructor(data: UsuarioModel) {
-        super(data.id);
-        this.nome = data.nome;
-        this.email = data.email;
+    constructor({ id, nome, email }: { id?: string; nome: string; email: string }) {
+        super(id ?? '');
+        this.nome = nome;
+        this.email = email;
     }
 }

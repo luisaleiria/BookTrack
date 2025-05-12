@@ -1,16 +1,24 @@
-import express from 'express';
+import express, { Express } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import routes from './routes';
+import loadRoutes from './routes';
+import { di } from './di';
+import { UsuarioService } from './services/usuario.service';
+
 
 dotenv.config();
 
-const app = express();
+const app: Express = express();
+
 app.use(cors());
 app.use(express.json());
-app.use(routes);
+
+// Registra os serviços antes de usá-los
+di.register(UsuarioService); // 👈
+
+loadRoutes(app);
 
 const PORT = process.env.PORT || 3333;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
