@@ -1,7 +1,6 @@
 import connection from '../database/connection';
 import UsuarioModel from '../models/usuario.model';
 
-
 export class UsuarioService {
 
     async cadastrarUsuario(nome: string, email: string): Promise<UsuarioModel> {

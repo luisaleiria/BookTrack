@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import loadRoutes from './routes';
 import { di } from './di';
 import { UsuarioService } from './services/usuario.service';
+import LivroService from './services/livro.service';
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 
 // Registra os serviços antes de usá-los
 di.register(UsuarioService);
+di.register(LivroService);
 
 // Carrega as rotas
 loadRoutes(app);

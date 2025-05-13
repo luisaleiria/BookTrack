@@ -7,7 +7,7 @@ interface cadastrarLivroData {
     avaliacao?: number;
 }
 
-export class Livro {
+export class LivroService {
 async cadastrarLivro(userId: number, data: cadastrarLivroData): Promise<typeof Book> {
     const { titulo, autor, status, avaliacao } = data;
 
@@ -72,4 +72,4 @@ deletarLivro = async (id: number, userId: number) => {
   await livro.destroy();
 }
 };
-export default Livro;
+export default LivroService;
