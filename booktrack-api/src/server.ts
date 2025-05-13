@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import loadRoutes from './routes';
 import { di } from './di';
 import { UsuarioService } from './services/usuario.service';
-import LivroService from './services/livro.service';
+import { LivroService } from './services/livro.service';
 
 dotenv.config();
 

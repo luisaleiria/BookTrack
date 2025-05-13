@@ -65,7 +65,7 @@ export const buscarLivroPorId = async (
       return;
     }
 
-    const livro = await livroService.IdLivro(id, Number(userId));
+    const livro = await livroService.buscarLivroPorId(id, Number(userId));
     res.status(200).json(livro);
   } catch (err: any) {
     next(err);
@@ -90,7 +90,7 @@ export const atualizarLivro = async (
       return;
     }
 
-    const livroAtualizado = await livroService.updateLivro(
+    const livroAtualizado = await livroService.atualizarLivro(
       id,
       Number(userId),
       req.body

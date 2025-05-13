@@ -30,6 +30,8 @@ export class UsuarioService {
         if (!usuario) {
             throw new Error('Usuário não encontrado');
         }
+        console.log('Usuário a ser excluído:', usuario);
         await connection('usuarios').where({ id }).delete();
+        return usuario;
     }
 }
