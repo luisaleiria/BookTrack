@@ -190,6 +190,7 @@ BookTrack/
 │  │  └─ seeds/           # Dados iniciais (vazio)
 │  ├─ di.ts               # Container de injeção de dependências
 │  ├─ routes.ts           # Definição de rotas
+   ├─ models              # Definição de Usuario e Livros
 │  └─ server.ts           # Boot do Express
 ├─ knexfile.js            # Configuração de ambientes Knex
 ├─ package.json
