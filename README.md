@@ -187,7 +187,7 @@ BookTrack/
 │  ├─ database/
 │  │  ├─ connection.ts    # Configuração do Knex
 │  │  ├─ migrations/      # Arquivos de criação de tabelas
-│  │  └─ seeds/           # Dados iniciais (opcional)
+│  │  └─ seeds/           # Dados iniciais (vazio)
 │  ├─ di.ts               # Container de injeção de dependências
 │  ├─ routes.ts           # Definição de rotas
 │  └─ server.ts           # Boot do Express
