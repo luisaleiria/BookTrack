@@ -94,11 +94,11 @@ Para facilitar seus primeiros testes, siga estes passos no **Thunder Client** (e
      | Key            | Value             |
      | -------------- | ----------------- |
      | `Content-Type` | `application/json`|
-     | `user-id`      | `13`              | _(ou envie `userId` no body)_  
+     | `user-id`      | `12`              | _(ou envie `userId` no body)_  
    - **Body (JSON)**:
      ```json
      {
-       "userId": 13,
+       "userId": 12,
        "titulo": "Clean Code",
        "autor": "Robert C. Martin",
        "status": "Lido",
@@ -113,7 +113,7 @@ Para facilitar seus primeiros testes, siga estes passos no **Thunder Client** (e
    - **Headers**:  
      | Key       | Value |
      | --------- | ----- |
-     | `user-id` | `13`  |  
+     | `user-id` | `12`  |  
    - **Send** → HTTP 200 e retorna um array de livros do usuário.
 
 7. **Buscar Livro por ID**  
@@ -123,7 +123,7 @@ Para facilitar seus primeiros testes, siga estes passos no **Thunder Client** (e
    - **Headers**:  
      | Key       | Value |
      | --------- | ----- |
-     | `user-id` | `13`  |
+     | `user-id` | `12`  |
    - **Send** → HTTP 200 e retorna o JSON do livro.
 
 8. **Atualizar Livro**  
@@ -134,7 +134,7 @@ Para facilitar seus primeiros testes, siga estes passos no **Thunder Client** (e
      | Key            | Value             |
      | -------------- | ----------------- |
      | `Content-Type` | `application/json`|
-     | `user-id`      | `13`              |
+     | `user-id`      | `12`              |
    - **Body (JSON)**:
      ```json
      {
@@ -153,7 +153,7 @@ Para facilitar seus primeiros testes, siga estes passos no **Thunder Client** (e
    - **Headers**:  
      | Key       | Value |
      | --------- | ----- |
-     | `user-id` | `13`  |
+     | `user-id` | `12`  |
    - **Send** → HTTP 204 No Content.
 
 > 💡 **Dica:** Salve cada requisição na coleção **BookTrack API** e ajuste o `<id>` e o `user-id` conforme os registros gerados no seu banco.
@@ -190,7 +190,7 @@ BookTrack/
 │  │  └─ seeds/           # Dados iniciais (vazio)
 │  ├─ di.ts               # Container de injeção de dependências
 │  ├─ routes.ts           # Definição de rotas
-   ├─ models              # Definição de Usuario e Livros
+|  ├─ models              # Definição de Usuario e Livros
 │  └─ server.ts           # Boot do Express
 ├─ knexfile.js            # Configuração de ambientes Knex
 ├─ package.json
